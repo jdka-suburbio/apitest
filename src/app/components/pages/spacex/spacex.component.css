@@ -1,0 +1,95 @@
+/* Contenedor para permitir scroll horizontal en pantallas pequeñas */
+.spacex-table-wrapper {
+	width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	margin: 1rem 0;
+}
+
+table.spacex-table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 640px; /* fuerza scroll en móviles si hace falta */
+	font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: #fff;
+	box-shadow: 0 1px 2px rgba(16,24,40,0.05);
+}
+
+table.spacex-table thead th {
+	text-align: left;
+	padding: 12px 16px;
+	font-size: 0.95rem;
+	color: #0f172a;
+	background: linear-gradient(180deg, #f8fafc, #f1f5f9);
+	border-bottom: 1px solid #e6edf3;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+table.spacex-table tbody td {
+	padding: 12px 16px;
+	vertical-align: middle;
+	border-bottom: 1px solid #f1f5f9;
+	color: #0b1220;
+	font-size: 0.9rem;
+}
+
+/* Zebra rows */
+table.spacex-table tbody tr:nth-child(odd) {
+	background: #ffffff;
+}
+table.spacex-table tbody tr:nth-child(even) {
+	background: #fbfdff;
+}
+
+/* Hover highlight */
+table.spacex-table tbody tr:hover {
+	background: #eef6ff;
+}
+
+/* Imagen del parche */
+table.spacex-table img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	border-radius: 6px;
+	box-shadow: 0 1px 2px rgba(2,6,23,0.06);
+}
+
+/* Mensajes */
+.loading {
+	padding: 12px 0;
+	color: #0f5132;
+	background: #ecfdf5;
+	border: 1px solid #d1fae5;
+	border-radius: 6px;
+	margin: 0.75rem 0;
+}
+.error {
+	padding: 12px 0;
+	color: #641e16;
+	background: #fff1f2;
+	border: 1px solid #fecaca;
+	border-radius: 6px;
+	margin: 0.75rem 0;
+}
+
+/* Empty state */
+.no-data {
+	color: #475569;
+	padding: 0.75rem 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 720px) {
+	table.spacex-table thead th,
+	table.spacex-table tbody td {
+		padding: 10px 12px;
+		font-size: 0.85rem;
+	}
+	table.spacex-table {
+		min-width: 520px;
+	}
+}
+

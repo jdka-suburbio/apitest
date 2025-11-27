@@ -1,0 +1,20 @@
+<app-header></app-header>
+<app-menu></app-menu>
+<p>spacex works!</p>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Rocket Image</th>
+        <th>Details</th>
+    </tr>
+    @for (row of launches; track row.flight_number) {
+        <tr>
+            <td>{{ row.name }}</td>
+            <td>
+                <img width="100" src="{{ row.links.patch.small }}" alt="{{ row.rocket.rocket_name }}">
+            </td>
+            <td>{{ row.details }}</td>
+        </tr>    
+    }
+</table>    
+<app-footer></app-footer>

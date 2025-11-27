@@ -1,0 +1,25 @@
+<app-header></app-header>
+<app-menu></app-menu>
+<p>home works! {{title}}</p>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+    </tr>
+    @for (post of posts; track post.id) {
+        <tr>
+            <td>{{ post.id }}</td>
+            <td>{{ post.title }}</td>
+            <td>{{ post.body }}</td>
+        </tr>    
+    }
+</table>
+<ul>
+  @for (item of posts; track item.id) {
+    <li>{{ item.title }}</li>
+  } @empty {
+    <li>No items found.</li>
+  }    
+</ul>
+<app-footer></app-footer>
