@@ -1,0 +1,108 @@
+/* Contenedor del menú */
+:host {
+  display: block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Nav container */
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+/* Links de navegación */
+a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  position: relative;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+/* Hover effect */
+a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom-color: #fbbf24;
+  transform: translateY(-2px);
+}
+
+/* Active link (usando routerLinkActive) */
+a.active,
+a[routerLinkActive] {
+  background: rgba(255, 255, 255, 0.15);
+  border-bottom-color: #fbbf24;
+  font-weight: 600;
+}
+
+/* Focus accessibility */
+a:focus {
+  outline: 2px solid #fbbf24;
+  outline-offset: -2px;
+}
+
+/* Efecto de línea animada al pasar */
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #fbbf24;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a.active::after {
+  width: 100%;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 768px) {
+  a {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  nav {
+    gap: 0;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+  a {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.85rem;
+  }
+
+  a::before {
+    content: '•';
+    margin-right: 0.25rem;
+    opacity: 0.5;
+  }
+
+  a:first-child::before {
+    display: none;
+  }
+}

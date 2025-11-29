@@ -1,0 +1,28 @@
+<app-header></app-header>
+<app-menu></app-menu>
+<p>firebase works!</p>
+<table>
+    <tr>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Parcial 1</th>
+        <th>Parcial 2</th>
+        <th>Parcial 3</th>
+        <th>Examen Final</th>
+        <th>Nota Final</th>
+    </tr>
+    @for (row of dataFirebase; track $index) {
+        <tr>
+            <td>{{ row.Nombres }}</td>
+            <td>{{ row.Apellidos }}</td>
+            <td>{{ row.Puntaje.Parcial1 }}</td>
+            <td>{{ row.Puntaje.Parcial2 }}</td>
+            <td>{{ row.Puntaje.Parcial3 }}</td>
+            <td>{{ row.Puntaje.ExamenFinal }}</td>
+            <td></td>
+        </tr>    
+    }   
+</table>
+<h3>Total Estudiantes: {{totalStudents}}</h3>
+<h3>Total Aprobados: {{totalPassedStudents}}</h3>
+<app-footer></app-footer>

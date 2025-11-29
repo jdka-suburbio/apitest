@@ -1,0 +1,10 @@
+table {
+    background-color: bisque;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+th {
+    background-color: sienna;
+    color: white;
+    padding: 10px;
+}

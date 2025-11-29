@@ -11,6 +11,7 @@ import { MenuComponent } from './components/commons/menu/menu.component';
 import { SpacexComponent } from './components/pages/spacex/spacex.component';
 
 import { provideHttpClient } from '@angular/common/http';
+import { FirebaseComponent } from './components/pages/firebase/firebase.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { provideHttpClient } from '@angular/common/http';
     HomeComponent,
     ConcursoComponent,
     MenuComponent,
-    SpacexComponent
+    SpacexComponent,
+    FirebaseComponent
   ],
   imports: [
     BrowserModule,

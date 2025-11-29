@@ -1,4 +1,15 @@
-<a routerLink="/">Home</a>
-<a routerLink="/contest">Concurso</a>
-<a routerLink="/spacex">SpaceX</a>
+<nav>
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    🏠 Home
+  </a>
+  <a routerLink="/contest" routerLinkActive="active">
+    🏆 Concurso
+  </a>
+  <a routerLink="/spacex" routerLinkActive="active">
+    🚀 SpaceX
+  </a>
+  <a routerLink="/firebase" routerLinkActive="active">
+    🔥 Firebase
+  </a>
+</nav>
 
